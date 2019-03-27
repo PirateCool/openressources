@@ -1,5 +1,5 @@
 
-Merci a @PaulB pour le setup
+Merci a @Paul00B pour le setup
 
 # Organisation
 Two templates are within this app, one is a one page, and the other one is a dashboard. Most of the assets can be found in the `vendor/assets` folder. As there's a lot of plugins that you might no know, we strongly advice you not to change any files in there.
