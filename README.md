@@ -1,9 +1,5 @@
-# The Hacking Project - The final project !
 
-The past weeks have been a lot of hard work, and the last straight line's ahead. Here's an app to help you if you struggle to use templates.
-
-This app has been created for [The Hacking Project](https://www.thehackingproject.org/) and is destined to be used only by the students & the creator.
-
+Merci a @PaulB pour le setup
 
 # Organisation
 Two templates are within this app, one is a one page, and the other one is a dashboard. Most of the assets can be found in the `vendor/assets` folder. As there's a lot of plugins that you might no know, we strongly advice you not to change any files in there.
