@@ -1,0 +1,44 @@
+<div class="main-content">
+  <section class="section">
+
+    <br>
+    <br>
+    <br>
+<%= simple_form_for(@ressource) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: "Titre de votre ressource" %>
+  </div>
+
+  <div class="form-inputs">
+ <%= f.association :projects, as: :check_boxes %>
+  </div>
+
+
+  <div class="form-inputs">
+    <%= f.input :url, label: "Liens vers votre ressource (optionnel)" %>
+  </div>
+
+   <div class="form-inputs">
+    <%= f.input :description, rows: 6, label: "Description de la ressource" %>
+  </div>
+
+
+<div id="taggin" class="form-group">
+                  <div class="js-focus-state">
+     <div class="form-inputs u-tagsinput">
+      <%= f.input :tag_list, label: "Tags (Appuyer sur 'Entrer' pour ajouter plusieurs)", input_html: {value: @ressource.tag_list.to_s, "data-role": "tagsinput", "placeholder": "HTML, CSS" } %>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="form-actions">
+    <%= f.button :submit, value: "Partager, c'est vraiment sympa", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+</section></div>

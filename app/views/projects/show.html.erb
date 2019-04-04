@@ -1,0 +1,50 @@
+<div class="main-content">
+  <section class="section">
+
+
+ <div class="hero bg-dark text-white mb-5">
+                  <div class="hero-inner">
+                    <h2><%= @project.name %></h2>
+                    <span><%= @project.ressources.size %> ressources</span>
+                  </div>
+                </div>
+
+
+<% @project.ressources.each do |ressource| %>
+
+  	<div class="row">
+  		<div class="col-12 mb-3">
+                <div class="hero bg-primary text-white">
+                	<div class="hero-header text-right">
+
+					<span>Posté par <%= ressource.user.username %></span>
+               		<div class="mr-8"></div>
+
+                	<div style="position: relative; right: 0px;">
+                		<%= link_to "Editer", edit_ressource_path(ressource), class:"text-light" %>
+                	</div>
+
+                	<div>
+                	</div>
+
+                	</div>
+
+                  <div class="hero-inner">
+                    <h2><%= ressource.name %></h2>
+                    <p class="lead mb-3"><%= ressource.description %></p>
+
+                    <% ressource.tags.each do |t| %>
+                    <a href="#" class="badge badge-light"><%= t.name %></a>
+                    <% end %>
+
+
+
+                  </div>
+                </div>
+        </div>
+  	</div>
+
+ <% end %> 
+
+</section>
+</div>

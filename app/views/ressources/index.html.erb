@@ -1,0 +1,51 @@
+
+<div class="main-content">
+  <section class="section">
+
+<p id="notice"><%= notice %></p>
+
+<div class="card bg-dark p-2"><h1>Ressources</h1></div>
+
+
+    <% @ressources.each do |ressource| %>
+     
+      
+      <div class="card">
+                 
+                  <div class="card-body p-2 pl-4">
+                    <div class="media">
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-1 text-dark"><%= ressource.name %></h5>
+                        <p><%= ressource.description %></p>
+                        <% ressource.tags.each do |tag| %>
+<a href="#" class="btn btn-default"><%= tag.name %></a>                        
+
+<% end %>
+
+                      </div>
+
+                  <% if !ressource.url.blank?%>
+                  <a href="<%= ressource.url %>" class="btn btn-icon btn-info"><i class="fas fa-link"></i></a> 
+                  <% end %>
+                    </div>
+                  </div>
+                  <div class="card-footer p-1 pl-4">
+                   <% ressource.projects.each do |project| %> 
+                    <a href="/projects/<%=project.id%>" class="small mr-4"><%= project.name %></a>
+                    <% end %>
+                    <br>                    <i> Posté par <%= ressource.user.username %></i>
+
+                  </div>
+    </div>
+
+
+
+    <% end %>
+
+<br>
+
+<%= link_to 'Ajouter une ressource', new_ressource_path %>
+
+
+</section>
+</div>

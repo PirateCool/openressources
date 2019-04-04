@@ -42,6 +42,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (6.0.0)
+      activerecord (~> 5.0)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     archive-zip (0.11.0)
@@ -51,6 +53,8 @@ GEM
     bindex (0.5.0)
     bootsnap (1.4.0)
       msgpack (~> 1.0)
+    bootstrap-tagsinput-rails (0.4.2.1)
+      railties (>= 3.1)
     builder (3.2.3)
     byebug (11.0.0)
     capybara (3.13.2)
@@ -195,6 +199,9 @@ GEM
       em-dir-watcher
       eventmachine
       tilt (>= 1)
+    simple_form (4.1.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -213,9 +220,6 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    turbolinks (5.2.0)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -237,7 +241,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 6.0)
   bootsnap (>= 1.1.0)
+  bootstrap-tagsinput-rails
   byebug
   capybara (>= 2.15)
   chromedriver-helper
@@ -253,10 +259,10 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   sidekick
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   stripe
-  turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

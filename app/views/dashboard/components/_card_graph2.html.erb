@@ -1,0 +1,31 @@
+<div class="col-lg-4 col-md-4 col-sm-12">
+  <div class="card card-statistic-2">
+   
+    <div class="card-icon shadow-primary bg-primary">
+      <i class="fas fa-archive"></i>
+    </div>
+    <div class="card-wrap">
+      <div class="card-header">
+        <h4>Ressources ajoutées</h4>
+      </div>
+
+      <div class="card-body">
+
+        <% if user_signed_in? %>
+        <%= current_user.ressources.size %>
+
+        <% else %>
+
+        <p class="mb-0">Vous n'êtes pas connecté ou pas encore inscris.</p> 
+        <div class="m-1 mx-auto">
+        <a class="btn btn-sm btn-primary text-light" href="/users/sign_up">
+        S'inscrire</a>
+          <a class="btn btn-sm btn-primary text-light" href="/users/sign_in">
+        Se connecter</a>
+      </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
