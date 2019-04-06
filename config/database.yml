@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: dashboard_thp_fp_production
-  username: dashboard_thp_fp
-  password: <%= ENV['DASHBOARD_THP_FP_DATABASE_PASSWORD'] %>
+    database: dashboard_thp_fp_production
+
