@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  secret_key_base: 477ea972ff63a2ce415671ba1dd17255
+  secret_key_base: f5ee01323b33ec55444a90887470875b3e0326682292e11d36545f26401cb58344c288695f9ae47a82bfbb9193185a4cb41ffcd40e69a8c7d1c60cba9895b1f8
   database: dashboard_thp_fp_production
 
